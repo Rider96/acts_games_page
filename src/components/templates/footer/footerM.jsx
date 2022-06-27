@@ -49,7 +49,7 @@ function FooterM() {
                   height: 39,
                   marginBottom: 20,
                 }}
-                src={"/assets/icons/logo04.png"}
+                src={"./assets/icons/logo04.png"}
                 alt="logo04"
               />
 

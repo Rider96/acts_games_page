@@ -28,7 +28,7 @@ function HeaderM(props) {
           width: 66,
           height: 31.73,
         }}
-        src="/assets/icons/logo01.png"
+        src="./assets/icons/logo01.png"
         alt="logo01"
       />
 
@@ -41,7 +41,7 @@ function HeaderM(props) {
           width: 24,
           height: 24,
         }}
-        src="/assets/icons/menu.png"
+        src="./assets/icons/menu.png"
         alt="menu"
       />
     </Layout>

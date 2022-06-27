@@ -13,7 +13,7 @@ const AnyReactComponent = ({ text }) => (
         width: 30,
         height: 30,
       }}
-      src="/assets/icons/markers02.png"
+      src="./assets/icons/markers02.png"
       alt="marker"
     />
   </div>
@@ -88,7 +88,7 @@ function Contact() {
                     width: 67,
                     height: 26,
                   }}
-                  src={"/assets/icons/logo03.png"}
+                  src={"./assets/icons/logo03.png"}
                   alt="logo03"
                 />
                 <div
@@ -123,7 +123,7 @@ function Contact() {
             style={{
               flex: 1,
               position: "relative",
-              backgroundImage: `url("/assets/images/contact_bg.png")`,
+              backgroundImage: `url("./assets/images/contact_bg.png")`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
@@ -170,7 +170,7 @@ function Contact() {
                     height: 34,
                     marginRight: 25,
                   }}
-                  src={"/assets/icons/recruiting.png"}
+                  src={"./assets/icons/recruiting.png"}
                   alt="recruiting"
                 />
                 <div
@@ -217,7 +217,7 @@ function Contact() {
                     height: 34,
                     marginRight: 25,
                   }}
-                  src={"/assets/icons/business.png"}
+                  src={"./assets/icons/business.png"}
                   alt="business"
                 />
                 <div
@@ -264,7 +264,7 @@ function Contact() {
                     height: 34,
                     marginRight: 25,
                   }}
-                  src={"/assets/icons/others.png"}
+                  src={"./assets/icons/others.png"}
                   alt="others"
                 />
                 <div

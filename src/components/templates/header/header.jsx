@@ -116,7 +116,7 @@ function Header(props) {
                   height: 37,
                   marginRight: 70,
                 }}
-                src="/assets/icons/logo01.png"
+                src="./assets/icons/logo01.png"
                 alt="logo01"
               />
 

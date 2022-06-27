@@ -22,7 +22,7 @@ function AboutUsM() {
         <div
           style={{
             position: "relative",
-            backgroundImage: `url("/assets/images/bg_m02.png")`,
+            backgroundImage: `url("./assets/images/bg_m02.png")`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -52,7 +52,7 @@ function AboutUsM() {
                   marginLeft: 58,
                   marginBottom: 10,
                 }}
-                src="/assets/icons/triangle.png"
+                src="./assets/icons/triangle.png"
                 alt="triangle"
               />
 
@@ -88,7 +88,7 @@ function AboutUsM() {
                     right: 70,
                     top: 60,
                   }}
-                  src="/assets/icons/circle.png"
+                  src="./assets/icons/circle.png"
                   alt="circle"
                 />
 
@@ -99,7 +99,7 @@ function AboutUsM() {
                     marginTop: 10,
                     marginLeft: 107,
                   }}
-                  src="/assets/icons/square.png"
+                  src="./assets/icons/square.png"
                   alt="square"
                 />
               </div>

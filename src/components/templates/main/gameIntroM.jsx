@@ -53,7 +53,7 @@ function GameIntroM() {
   const [afterArrow, setAfterArrow] = useState(true);
 
   const [topImage, setTopImage] = useState(
-    "/assets/images/gameIntro/main_top01_m.png"
+    "./assets/images/gameIntro/main_top01_m.png"
   );
   const [itemData, setItemData] = useState({
     name: "ZOIDS WILD",
@@ -197,7 +197,7 @@ function GameIntroM() {
 
   useEffect(() => {
     if (itemClickedList.item01) {
-      setTopImage("/assets/images/gameIntro/main_top01_m.png");
+      setTopImage("./assets/images/gameIntro/main_top01_m.png");
       setItemData({
         name: "ZOIDS WILD",
         store: {
@@ -216,21 +216,21 @@ function GameIntroM() {
         },
         images: [
           {
-            url: "/assets/images/gameIntro/game01_slide02.png",
+            url: "./assets/images/gameIntro/game01_slide02.png",
             link: "",
           },
           {
-            url: "/assets/images/gameIntro/game01_slide03.png",
+            url: "./assets/images/gameIntro/game01_slide03.png",
             link: "",
           },
         ],
         youtube: {
-          url: "/assets/images/gameIntro/game01_slide01.png",
+          url: "./assets/images/gameIntro/game01_slide01.png",
           link: "",
         },
       });
     } else if (itemClickedList.item02) {
-      setTopImage("/assets/images/gameIntro/main_top02_m.png");
+      setTopImage("./assets/images/gameIntro/main_top02_m.png");
       setItemData({
         name: "BUB'S PUZZLE BLAST",
         store: {
@@ -249,21 +249,21 @@ function GameIntroM() {
         },
         images: [
           {
-            url: "/assets/images/gameIntro/game02_slide02.png",
+            url: "./assets/images/gameIntro/game02_slide02.png",
             link: "",
           },
           {
-            url: "/assets/images/gameIntro/game02_slide03.png",
+            url: "./assets/images/gameIntro/game02_slide03.png",
             link: "",
           },
         ],
         youtube: {
-          url: "/assets/images/gameIntro/game02_slide01.png",
+          url: "./assets/images/gameIntro/game02_slide01.png",
           link: "https://youtu.be/F_wxynHm32g",
         },
       });
     } else if (itemClickedList.item03) {
-      setTopImage("/assets/images/gameIntro/main_top03_m.png");
+      setTopImage("./assets/images/gameIntro/main_top03_m.png");
       setItemData({
         name: "AGGRETSUKO",
         store: {
@@ -282,21 +282,21 @@ function GameIntroM() {
         },
         images: [
           {
-            url: "/assets/images/gameIntro/game03_slide02.png",
+            url: "./assets/images/gameIntro/game03_slide02.png",
             link: "",
           },
           {
-            url: "/assets/images/gameIntro/game03_slide03.png",
+            url: "./assets/images/gameIntro/game03_slide03.png",
             link: "",
           },
         ],
         youtube: {
-          url: "/assets/images/gameIntro/game03_slide01.png",
+          url: "./assets/images/gameIntro/game03_slide01.png",
           link: "https://youtu.be/WNEWqHPEWDY",
         },
       });
     } else if (itemClickedList.item04) {
-      setTopImage("/assets/images/gameIntro/main_top04_m.png");
+      setTopImage("./assets/images/gameIntro/main_top04_m.png");
       setItemData({
         name: "PEKO POP",
         store: {
@@ -315,21 +315,21 @@ function GameIntroM() {
         },
         images: [
           {
-            url: "/assets/images/gameIntro/game04_slide02.png",
+            url: "./assets/images/gameIntro/game04_slide02.png",
             link: "",
           },
           {
-            url: "/assets/images/gameIntro/game04_slide03.png",
+            url: "./assets/images/gameIntro/game04_slide03.png",
             link: "",
           },
         ],
         youtube: {
-          url: "/assets/images/gameIntro/game04_slide01.png",
+          url: "./assets/images/gameIntro/game04_slide01.png",
           link: "https://www.youtube.com/watch?v=rRh4qv7EuKg",
         },
       });
     } else if (itemClickedList.item05) {
-      setTopImage("/assets/images/gameIntro/main_top05_m.png");
+      setTopImage("./assets/images/gameIntro/main_top05_m.png");
       setItemData({
         name: "MOGMOG PLANET",
         store: {
@@ -348,21 +348,21 @@ function GameIntroM() {
         },
         images: [
           {
-            url: "/assets/images/gameIntro/game05_slide02.png",
+            url: "./assets/images/gameIntro/game05_slide02.png",
             link: "",
           },
           {
-            url: "/assets/images/gameIntro/game05_slide03.png",
+            url: "./assets/images/gameIntro/game05_slide03.png",
             link: "",
           },
         ],
         youtube: {
-          url: "/assets/images/gameIntro/game05_slide01.png",
+          url: "./assets/images/gameIntro/game05_slide01.png",
           link: "https://youtu.be/N9_zpRueUTg",
         },
       });
     } else if (itemClickedList.item06) {
-      setTopImage("/assets/images/gameIntro/main_top06_m.png");
+      setTopImage("./assets/images/gameIntro/main_top06_m.png");
     }
   }, [itemClickedList]);
 
@@ -406,8 +406,8 @@ function GameIntroM() {
             <ImageCard
               src={
                 itemClickedList.item01
-                  ? "/assets/images/gameIntro/main_mini01.png"
-                  : "/assets/images/gameIntro/main_mini01_d.png"
+                  ? "./assets/images/gameIntro/main_mini01.png"
+                  : "./assets/images/gameIntro/main_mini01_d.png"
               }
               alt="main_mini01"
               onClick={() => {
@@ -425,8 +425,8 @@ function GameIntroM() {
             <ImageCard
               src={
                 itemClickedList.item02
-                  ? "/assets/images/gameIntro/main_mini02.png"
-                  : "/assets/images/gameIntro/main_mini02_d.png"
+                  ? "./assets/images/gameIntro/main_mini02.png"
+                  : "./assets/images/gameIntro/main_mini02_d.png"
               }
               alt="main_mini02"
               onClick={() => {
@@ -444,8 +444,8 @@ function GameIntroM() {
             <ImageCard
               src={
                 itemClickedList.item03
-                  ? "/assets/images/gameIntro/main_mini03.png"
-                  : "/assets/images/gameIntro/main_mini03_d.png"
+                  ? "./assets/images/gameIntro/main_mini03.png"
+                  : "./assets/images/gameIntro/main_mini03_d.png"
               }
               alt="main_mini03"
               onClick={() => {
@@ -463,8 +463,8 @@ function GameIntroM() {
             <ImageCard
               src={
                 itemClickedList.item04
-                  ? "/assets/images/gameIntro/main_mini04.png"
-                  : "/assets/images/gameIntro/main_mini04_d.png"
+                  ? "./assets/images/gameIntro/main_mini04.png"
+                  : "./assets/images/gameIntro/main_mini04_d.png"
               }
               alt="main_mini04"
               onClick={() => {
@@ -482,8 +482,8 @@ function GameIntroM() {
             <ImageCard
               src={
                 itemClickedList.item05
-                  ? "/assets/images/gameIntro/main_mini05.png"
-                  : "/assets/images/gameIntro/main_mini05_d.png"
+                  ? "./assets/images/gameIntro/main_mini05.png"
+                  : "./assets/images/gameIntro/main_mini05_d.png"
               }
               alt="main_mini05"
               onClick={() => {
@@ -507,7 +507,7 @@ function GameIntroM() {
                 style={{
                   marginRight: 0,
                 }}
-                src="/assets/images/gameIntro/main_mini06.png"
+                src="./assets/images/gameIntro/main_mini06.png"
                 alt="main_mini06"
               />
               <div
@@ -582,7 +582,7 @@ function GameIntroM() {
                       height: 22,
                       marginRight: 16,
                     }}
-                    src={"/assets/icons/windows.png"}
+                    src={"./assets/icons/windows.png"}
                     alt="windows"
                   />
                 ) : null}
@@ -601,7 +601,7 @@ function GameIntroM() {
                       height: 23.08,
                       marginRight: 14,
                     }}
-                    src={"/assets/icons/apple.png"}
+                    src={"./assets/icons/apple.png"}
                     alt="apple"
                   />
                 ) : null}
@@ -619,7 +619,7 @@ function GameIntroM() {
                       width: 23,
                       height: 22,
                     }}
-                    src={"/assets/icons/android.png"}
+                    src={"./assets/icons/android.png"}
                     alt="android"
                   />
                 ) : null}
@@ -671,8 +671,8 @@ function GameIntroM() {
               }}
               src={
                 beforeArrow
-                  ? "/assets/icons/s_left_arrow.png"
-                  : "/assets/icons/s_left_arrow_d.png"
+                  ? "./assets/icons/s_left_arrow.png"
+                  : "./assets/icons/s_left_arrow_d.png"
               }
               alt="s_left_arrow"
             />
@@ -687,8 +687,8 @@ function GameIntroM() {
               }}
               src={
                 afterArrow
-                  ? "/assets/icons/s_right_arrow.png"
-                  : "/assets/icons/s_right_arrow_d.png"
+                  ? "./assets/icons/s_right_arrow.png"
+                  : "./assets/icons/s_right_arrow_d.png"
               }
               alt="s_right_arrow"
             />

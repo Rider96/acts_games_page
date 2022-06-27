@@ -134,7 +134,7 @@ function SideMenu(props) {
                 width: 66,
                 height: 31.73,
               }}
-              src="/assets/icons/logo01.png"
+              src="./assets/icons/logo01.png"
               alt="logo01"
             />
             <img
@@ -143,7 +143,7 @@ function SideMenu(props) {
                 width: 24,
                 height: 24,
               }}
-              src="/assets/icons/close.png"
+              src="./assets/icons/close.png"
               alt="close"
               onClick={() => props.close(false)}
             />
@@ -168,7 +168,7 @@ function SideMenu(props) {
                       height: 7,
                       marginRight: 4,
                     }}
-                    src="/assets/icons/menu_up.png"
+                    src="./assets/icons/menu_up.png"
                     alt="menu_up"
                     onClick={() => {
                       setItemClickedList({
@@ -185,7 +185,7 @@ function SideMenu(props) {
                       height: 7,
                       marginRight: 4,
                     }}
-                    src="/assets/icons/menu_down.png"
+                    src="./assets/icons/menu_down.png"
                     alt="menu_down"
                     onClick={() => {
                       setItemClickedList({

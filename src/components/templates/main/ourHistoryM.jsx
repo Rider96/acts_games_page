@@ -193,7 +193,7 @@ function OurHistoryM() {
         <div
           style={{
             position: "relative",
-            backgroundImage: `url("/assets/images/bg_m03.png")`,
+            backgroundImage: `url("./assets/images/bg_m03.png")`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",

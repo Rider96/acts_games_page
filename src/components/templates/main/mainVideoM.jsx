@@ -12,12 +12,12 @@ function MainVideoM() {
   const history = useHistory();
   const [itemData, setItemData] = useState({
     images: [
-      "/assets/images/bg_m01_01.png",
-      "/assets/images/bg_m01_02.png",
-      "/assets/images/bg_m01_03.png",
-      "/assets/images/bg_m01_04.png",
-      "/assets/images/bg_m01_05.png",
-      "/assets/images/bg_m01_06.png",
+      "./assets/images/bg_m01_01.png",
+      "./assets/images/bg_m01_02.png",
+      "./assets/images/bg_m01_03.png",
+      "./assets/images/bg_m01_04.png",
+      "./assets/images/bg_m01_05.png",
+      "./assets/images/bg_m01_06.png",
     ],
   });
 
@@ -96,7 +96,7 @@ function MainVideoM() {
                 width: 115.25,
                 height: 46.84,
               }}
-              src="/assets/icons/logo02.png"
+              src="./assets/icons/logo02.png"
               alt="logo02"
             />
             <div
@@ -158,7 +158,7 @@ function MainVideoM() {
               height: 7.65,
               marginBottom: 31,
             }}
-            src="/assets/icons/down_arrow.png"
+            src="./assets/icons/down_arrow.png"
             alt="down_arrow"
           />
         </div>

@@ -22,7 +22,7 @@ function AboutUs() {
         <div
           style={{
             position: "relative",
-            backgroundImage: `url("/assets/images/bg_pc02.png")`,
+            backgroundImage: `url("./assets/images/bg_pc02.png")`,
             backgroundPosition: "center",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
@@ -53,7 +53,7 @@ function AboutUs() {
                     marginBottom: 34,
                     paddingRight: 20,
                   }}
-                  src="/assets/icons/triangle.png"
+                  src="./assets/icons/triangle.png"
                   alt="triangle"
                 />
 
@@ -83,7 +83,7 @@ function AboutUs() {
                         width: 19,
                         height: 20,
                       }}
-                      src="/assets/icons/circle.png"
+                      src="./assets/icons/circle.png"
                       alt="circle"
                     />
                   </div>
@@ -116,7 +116,7 @@ function AboutUs() {
                       height: 25,
                       marginTop: 32,
                     }}
-                    src="/assets/icons/square.png"
+                    src="./assets/icons/square.png"
                     alt="square"
                   />
                 </div>

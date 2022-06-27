@@ -19,49 +19,49 @@ function NewsM() {
   const [itemData, setItemData] = useState({
     images: [
       {
-        url: "/assets/images/news/news01.png",
+        url: "./assets/images/news/news01.png",
         date: "2022. 06. 07",
         content: "Zoids has been released ",
       },
       {
-        url: "/assets/images/news/news02.png",
+        url: "./assets/images/news/news02.png",
         date: "2022. 06. 07",
         content: "“Zoids Wild” has exceeded 100 million per month",
       },
       {
-        url: "/assets/images/news/news03.png",
+        url: "./assets/images/news/news03.png",
         date: "2022. 06. 07",
         content:
           "Takaratomy attended the licensing show and revealed ZOIDS NFT",
       },
       {
-        url: "/assets/images/news/news04.png",
+        url: "./assets/images/news/news04.png",
         date: "2022. 06. 07",
         content: "Zoids has been released ",
       },
       {
-        url: "/assets/images/news/news05.png",
+        url: "./assets/images/news/news05.png",
         date: "2022. 06. 07",
         content: "“Zoids Wild” has exceeded 100 million per month",
       },
       {
-        url: "/assets/images/news/news06.png",
+        url: "./assets/images/news/news06.png",
         date: "2022. 06. 07",
         content:
           "Takaratomy attended the licensing show and revealed ZOIDS NFT",
       },
       {
-        url: "/assets/images/news/news07.png",
+        url: "./assets/images/news/news07.png",
         date: "2022. 06. 07",
         content: "Zoids has been released ",
       },
       {
-        url: "/assets/images/news/news08.png",
+        url: "./assets/images/news/news08.png",
         date: "2022. 06. 07",
         content: "“Zoids Wild” has exceeded 100 million per month",
       },
       {
-        url: "/assets/images/news/news09.png",
+        url: "./assets/images/news/news09.png",
         date: "2022. 06. 07",
         content:
           "Takaratomy attended the licensing show and revealed ZOIDS NFT",
@@ -168,8 +168,8 @@ function NewsM() {
               }}
               src={
                 beforeArrow
-                  ? "/assets/icons/s_left_arrow.png"
-                  : "/assets/icons/s_left_arrow_d.png"
+                  ? "./assets/icons/s_left_arrow.png"
+                  : "./assets/icons/s_left_arrow_d.png"
               }
               alt="s_left_arrow"
             />
@@ -184,8 +184,8 @@ function NewsM() {
               }}
               src={
                 afterArrow
-                  ? "/assets/icons/s_right_arrow.png"
-                  : "/assets/icons/s_right_arrow_d.png"
+                  ? "./assets/icons/s_right_arrow.png"
+                  : "./assets/icons/s_right_arrow_d.png"
               }
               alt="s_right_arrow"
             />

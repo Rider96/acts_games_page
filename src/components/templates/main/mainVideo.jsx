@@ -38,7 +38,7 @@ function MainVideo() {
             muted
             loop
           >
-            <source src="/assets/video/main_video.mp4" type="video/mp4" />
+            <source src="./assets/video/main_video.mp4" type="video/mp4" />
           </video>
         </div>
 
@@ -70,7 +70,7 @@ function MainVideo() {
                 marginRight: 17,
                 marginTop: 7,
               }}
-              src="/assets/icons/logo02.png"
+              src="./assets/icons/logo02.png"
               alt="logo02"
             />
             <div
@@ -131,7 +131,7 @@ function MainVideo() {
               height: 7.65,
               marginBottom: 32,
             }}
-            src="/assets/icons/down_arrow.png"
+            src="./assets/icons/down_arrow.png"
             alt="down_arrow"
           />
         </div>
