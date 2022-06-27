@@ -1,0 +1,16 @@
+.vjs-big-play-centered .vjs-big-play-button {
+  top: 46%;
+  left: 49.8%;
+  margin-top: -0.81666em;
+  margin-left: -1em;
+  width: 64px;
+  height: 64px;
+}
+
+.video-js .vjs-big-play-button {
+  line-height: 2em;
+  border: 1px solid #fff;
+  background-color: #2b333f;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3.3em;
+}
