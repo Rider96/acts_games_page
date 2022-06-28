@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -9,8 +9,8 @@ import useDisplay from "../../../hooks/useDisplay";
 const ImageCard = styled.img.attrs((props) => {})`
   cursor: pointer;
   margin-right: 12px;
-  width: 112.14px;
-  height: 67px;
+  width: ${(props) => (props.isTablet ? "130px" : "112.14px")};
+  height: ${(props) => (props.isTablet ? "80px" : "67px")};
 
   ::after {
     background: linear-gradient(transparent, black);
@@ -28,6 +28,7 @@ const CateogryScroll = styled.div.attrs((props) => {})`
   display: flex;
   flex-direction: row;
   align-items: center;
+
   overflow-x: auto;
   white-space: pre-wrap;
 
@@ -39,13 +40,14 @@ const CateogryScroll = styled.div.attrs((props) => {})`
   }
 `;
 
-function GameIntroM() {
+const GameIntroM = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
   const { t } = useTranslation();
 
   const customeSlider = React.createRef();
+  const xScrollRef = React.createRef();
 
   const [count, setCount] = useState(1);
   const [countProcess, setCountProcess] = useState(true);
@@ -116,6 +118,70 @@ function GameIntroM() {
   const gotoPrev = () => {
     customeSlider.current.slickPrev();
   };
+
+  useEffect(() => {
+    switch (props.projects) {
+      case 1:
+        setItemClickedList({
+          item01: true,
+          item02: false,
+          item03: false,
+          item04: false,
+          item05: false,
+          item06: false,
+        });
+        setCount(1);
+        break;
+
+      case 2:
+        setItemClickedList({
+          item01: false,
+          item02: true,
+          item03: false,
+          item04: false,
+          item05: false,
+          item06: false,
+        });
+        setCount(2);
+        break;
+
+      case 3:
+        setItemClickedList({
+          item01: false,
+          item02: false,
+          item03: true,
+          item04: false,
+          item05: false,
+          item06: false,
+        });
+        setCount(3);
+        break;
+
+      case 4:
+        setItemClickedList({
+          item01: false,
+          item02: false,
+          item03: false,
+          item04: true,
+          item05: false,
+          item06: false,
+        });
+        setCount(4);
+        break;
+
+      case 5:
+        setItemClickedList({
+          item01: false,
+          item02: false,
+          item03: false,
+          item04: false,
+          item05: true,
+          item06: false,
+        });
+        setCount(5);
+        break;
+    }
+  }, [props]);
 
   useEffect(() => {
     if (!countProcess) return undefined;
@@ -229,6 +295,7 @@ function GameIntroM() {
           link: "",
         },
       });
+      xScrollRef.current?.scrollTo({ left: 0, behavior: "auto" });
     } else if (itemClickedList.item02) {
       setTopImage("./assets/images/gameIntro/main_top02_m.png");
       setItemData({
@@ -262,6 +329,7 @@ function GameIntroM() {
           link: "https://youtu.be/F_wxynHm32g",
         },
       });
+      xScrollRef.current?.scrollTo({ left: 60, behavior: "auto" });
     } else if (itemClickedList.item03) {
       setTopImage("./assets/images/gameIntro/main_top03_m.png");
       setItemData({
@@ -295,6 +363,7 @@ function GameIntroM() {
           link: "https://youtu.be/WNEWqHPEWDY",
         },
       });
+      xScrollRef.current?.scrollTo({ left: 120, behavior: "auto" });
     } else if (itemClickedList.item04) {
       setTopImage("./assets/images/gameIntro/main_top04_m.png");
       setItemData({
@@ -328,6 +397,7 @@ function GameIntroM() {
           link: "https://www.youtube.com/watch?v=rRh4qv7EuKg",
         },
       });
+      xScrollRef.current?.scrollTo({ left: 180, behavior: "auto" });
     } else if (itemClickedList.item05) {
       setTopImage("./assets/images/gameIntro/main_top05_m.png");
       setItemData({
@@ -361,6 +431,7 @@ function GameIntroM() {
           link: "https://youtu.be/N9_zpRueUTg",
         },
       });
+      xScrollRef.current?.scrollTo({ left: 300, behavior: "auto" });
     } else if (itemClickedList.item06) {
       setTopImage("./assets/images/gameIntro/main_top06_m.png");
     }
@@ -369,6 +440,7 @@ function GameIntroM() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           width: "100%",
           height: "100vh",
@@ -379,7 +451,7 @@ function GameIntroM() {
         <div
           style={{
             width: "100%",
-            height: 121,
+            height: isTablet ? 140 : 121,
             position: "relative",
           }}
         >
@@ -400,10 +472,12 @@ function GameIntroM() {
             paddingTop: 12,
             paddingLeft: 20,
             paddingRight: 14,
+            zIndex: 888,
           }}
         >
-          <CateogryScroll>
+          <CateogryScroll ref={xScrollRef}>
             <ImageCard
+              isTablet={isTablet}
               src={
                 itemClickedList.item01
                   ? "./assets/images/gameIntro/main_mini01.png"
@@ -423,6 +497,7 @@ function GameIntroM() {
               }}
             />
             <ImageCard
+              isTablet={isTablet}
               src={
                 itemClickedList.item02
                   ? "./assets/images/gameIntro/main_mini02.png"
@@ -442,6 +517,7 @@ function GameIntroM() {
               }}
             />
             <ImageCard
+              isTablet={isTablet}
               src={
                 itemClickedList.item03
                   ? "./assets/images/gameIntro/main_mini03.png"
@@ -461,6 +537,7 @@ function GameIntroM() {
               }}
             />
             <ImageCard
+              isTablet={isTablet}
               src={
                 itemClickedList.item04
                   ? "./assets/images/gameIntro/main_mini04.png"
@@ -480,6 +557,7 @@ function GameIntroM() {
               }}
             />
             <ImageCard
+              isTablet={isTablet}
               src={
                 itemClickedList.item05
                   ? "./assets/images/gameIntro/main_mini05.png"
@@ -504,6 +582,7 @@ function GameIntroM() {
               }}
             >
               <ImageCard
+                isTablet={isTablet}
                 style={{
                   marginRight: 0,
                 }}
@@ -644,7 +723,7 @@ function GameIntroM() {
               style={{
                 cursor: "pointer",
                 width: "100%",
-                height: 183,
+                height: isTablet ? 250 : 183,
               }}
               src={itemData.youtube?.url}
               alt="slider"
@@ -724,7 +803,7 @@ function GameIntroM() {
                         style={{
                           cursor: "pointer",
                           width: "100%",
-                          height: 178,
+                          height: isTablet ? 250 : 178,
                         }}
                         src={item.url}
                         alt="slider"
@@ -739,6 +818,5 @@ function GameIntroM() {
       </div>
     </>
   );
-}
-
+});
 export default GameIntroM;

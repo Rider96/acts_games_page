@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -35,7 +35,7 @@ const Container = styled.div.attrs((props) => {})`
   justify-content: space-between;
 `;
 
-function GameIntro() {
+const GameIntro = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
@@ -113,6 +113,70 @@ function GameIntro() {
   const gotoPrev = () => {
     customeSlider.current.slickPrev();
   };
+
+  useEffect(() => {
+    switch (props.projects) {
+      case 1:
+        setItemClickedList({
+          item01: true,
+          item02: false,
+          item03: false,
+          item04: false,
+          item05: false,
+          item06: false,
+        });
+        setCount(1);
+        break;
+
+      case 2:
+        setItemClickedList({
+          item01: false,
+          item02: true,
+          item03: false,
+          item04: false,
+          item05: false,
+          item06: false,
+        });
+        setCount(2);
+        break;
+
+      case 3:
+        setItemClickedList({
+          item01: false,
+          item02: false,
+          item03: true,
+          item04: false,
+          item05: false,
+          item06: false,
+        });
+        setCount(3);
+        break;
+
+      case 4:
+        setItemClickedList({
+          item01: false,
+          item02: false,
+          item03: false,
+          item04: true,
+          item05: false,
+          item06: false,
+        });
+        setCount(4);
+        break;
+
+      case 5:
+        setItemClickedList({
+          item01: false,
+          item02: false,
+          item03: false,
+          item04: false,
+          item05: true,
+          item06: false,
+        });
+        setCount(5);
+        break;
+    }
+  }, [props]);
 
   useEffect(() => {
     if (!countProcess) return undefined;
@@ -377,6 +441,7 @@ function GameIntro() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           width: "100%",
           height: "100vh",
@@ -744,6 +809,6 @@ function GameIntro() {
       </div>
     </>
   );
-}
+});
 
 export default GameIntro;

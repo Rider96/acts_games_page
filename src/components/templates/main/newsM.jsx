@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 import useDisplay from "../../../hooks/useDisplay";
 
-function NewsM() {
+const NewsM = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
@@ -117,12 +117,13 @@ function NewsM() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           display: "flex",
           flexDirection: "column",
           background: "#0A0518",
           width: "100%",
-          height: 519,
+          height: isTablet ? 560 : 519,
         }}
       >
         <div
@@ -211,7 +212,7 @@ function NewsM() {
                     <div key={index + 1}>
                       <img
                         style={{
-                          height: 190,
+                          height: isTablet ? 250 : 190,
                           cursor: "pointer",
                           width: "100%",
                         }}
@@ -250,6 +251,6 @@ function NewsM() {
       </div>
     </>
   );
-}
+});
 
 export default NewsM;

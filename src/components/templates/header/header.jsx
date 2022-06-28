@@ -121,6 +121,9 @@ function Header(props) {
               />
 
               <Button
+                onClick={() => {
+                  props.onAboutUslick(1);
+                }}
                 active={itemClickedList.about}
                 style={{
                   width: 70,
@@ -157,6 +160,10 @@ function Header(props) {
                     }}
                   >
                     <MenuLinkBasicButton
+                      onClick={() => {
+                        props.setProjects(1);
+                        props.onAboutUslick(2);
+                      }}
                       style={{
                         marginBottom: 16,
                       }}
@@ -164,6 +171,10 @@ function Header(props) {
                       Zoids Wild
                     </MenuLinkBasicButton>
                     <MenuLinkBasicButton
+                      onClick={() => {
+                        props.setProjects(2);
+                        props.onAboutUslick(2);
+                      }}
                       style={{
                         marginBottom: 16,
                       }}
@@ -171,6 +182,10 @@ function Header(props) {
                       BUB’S PUZZLE BLAST
                     </MenuLinkBasicButton>
                     <MenuLinkBasicButton
+                      onClick={() => {
+                        props.setProjects(3);
+                        props.onAboutUslick(2);
+                      }}
                       style={{
                         marginBottom: 16,
                       }}
@@ -181,6 +196,10 @@ function Header(props) {
                       style={{
                         marginBottom: 16,
                       }}
+                      onClick={() => {
+                        props.setProjects(4);
+                        props.onAboutUslick(2);
+                      }}
                     >
                       PEKO POP
                     </MenuLinkBasicButton>
@@ -188,14 +207,28 @@ function Header(props) {
                       style={{
                         marginBottom: 16,
                       }}
+                      onClick={() => {
+                        props.setProjects(5);
+                        props.onAboutUslick(2);
+                      }}
                     >
                       MOGMOG PLANTE
                     </MenuLinkBasicButton>
-                    <MenuLinkBasicButton>PROJECT M</MenuLinkBasicButton>
+                    <MenuLinkBasicButton
+                      onClick={() => {
+                        props.setProjects(1);
+                        props.onAboutUslick(2);
+                      }}
+                    >
+                      PROJECT M
+                    </MenuLinkBasicButton>
                   </MenuLayout>
                 ) : null}
               </Button>
               <Button
+                onClick={() => {
+                  props.onAboutUslick(3);
+                }}
                 style={{
                   width: 87,
                 }}
@@ -203,13 +236,23 @@ function Header(props) {
                 Our History
               </Button>
               <Button
+                onClick={() => {
+                  props.onAboutUslick(4);
+                }}
                 style={{
                   width: 50,
                 }}
               >
                 News
               </Button>
-              <Button style={{}}>Contact</Button>
+              <Button
+                onClick={() => {
+                  props.onAboutUslick(5);
+                }}
+                style={{}}
+              >
+                Contact
+              </Button>
             </div>
 
             <div

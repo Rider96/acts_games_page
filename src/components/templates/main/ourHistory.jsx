@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -218,7 +218,7 @@ const Line = styled.div.attrs((props) => {})`
   background: #ffffff;
 `;
 
-function OurHistory() {
+const OurHistory = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
@@ -249,6 +249,7 @@ function OurHistory() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           width: "100%",
           height: 972,
@@ -644,6 +645,6 @@ function OurHistory() {
       </div>
     </>
   );
-}
+});
 
 export default OurHistory;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -6,7 +6,7 @@ import Slider from "react-slick";
 
 import useDisplay from "../../../hooks/useDisplay";
 
-function News() {
+const News = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
@@ -130,6 +130,7 @@ function News() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           width: "100%",
           height: 733,
@@ -306,6 +307,6 @@ function News() {
       </div>
     </>
   );
-}
+});
 
 export default News;

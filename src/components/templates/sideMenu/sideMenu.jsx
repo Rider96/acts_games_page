@@ -150,7 +150,14 @@ function SideMenu(props) {
           </div>
           <div>
             <ListMenu>
-              <ListMenuMain>About Us</ListMenuMain>
+              <ListMenuMain
+                onClick={() => {
+                  props.onAboutUslick(1);
+                  props.close(false);
+                }}
+              >
+                About Us
+              </ListMenuMain>
             </ListMenu>
             <ListMenu>
               <ListMenuMain
@@ -198,15 +205,57 @@ function SideMenu(props) {
               </ListMenuMain>
               {itemClickedList.ourProjects ? (
                 <div>
-                  <ListMenuSub onClick={() => {}}>Zoids Wild</ListMenuSub>
-                  <ListMenuSub onClick={() => {}}>
+                  <ListMenuSub
+                    onClick={() => {
+                      props.setProjects(1);
+                      props.onAboutUslick(2);
+                      props.close(false);
+                    }}
+                  >
+                    Zoids Wild
+                  </ListMenuSub>
+                  <ListMenuSub
+                    onClick={() => {
+                      props.setProjects(2);
+                      props.onAboutUslick(2);
+                      props.close(false);
+                    }}
+                  >
                     BUB’S PUZZLE BLAST
                   </ListMenuSub>
-                  <ListMenuSub onClick={() => {}}>AGGRETSUKO</ListMenuSub>
-                  <ListMenuSub onClick={() => {}}>PEKO POP</ListMenuSub>
-                  <ListMenuSub onClick={() => {}}>MOGMOG PLANTE</ListMenuSub>
                   <ListMenuSub
-                    onClick={() => {}}
+                    onClick={() => {
+                      props.setProjects(3);
+                      props.onAboutUslick(2);
+                      props.close(false);
+                    }}
+                  >
+                    AGGRETSUKO
+                  </ListMenuSub>
+                  <ListMenuSub
+                    onClick={() => {
+                      props.setProjects(4);
+                      props.onAboutUslick(2);
+                      props.close(false);
+                    }}
+                  >
+                    PEKO POP
+                  </ListMenuSub>
+                  <ListMenuSub
+                    onClick={() => {
+                      props.setProjects(5);
+                      props.onAboutUslick(2);
+                      props.close(false);
+                    }}
+                  >
+                    MOGMOG PLANTE
+                  </ListMenuSub>
+                  <ListMenuSub
+                    onClick={() => {
+                      props.setProjects(1);
+                      props.onAboutUslick(2);
+                      props.close(false);
+                    }}
                     style={{
                       marginBottom: 24,
                     }}
@@ -217,13 +266,34 @@ function SideMenu(props) {
               ) : null}
             </ListMenu>
             <ListMenu>
-              <ListMenuMain>Our History</ListMenuMain>
+              <ListMenuMain
+                onClick={() => {
+                  props.onAboutUslick(3);
+                  props.close(false);
+                }}
+              >
+                Our History
+              </ListMenuMain>
             </ListMenu>
             <ListMenu>
-              <ListMenuMain>News</ListMenuMain>
+              <ListMenuMain
+                onClick={() => {
+                  props.onAboutUslick(4);
+                  props.close(false);
+                }}
+              >
+                News
+              </ListMenuMain>
             </ListMenu>
             <ListMenu>
-              <ListMenuMain>Contact</ListMenuMain>
+              <ListMenuMain
+                onClick={() => {
+                  props.onAboutUslick(5);
+                  props.close(false);
+                }}
+              >
+                Contact
+              </ListMenuMain>
             </ListMenu>
           </div>
 

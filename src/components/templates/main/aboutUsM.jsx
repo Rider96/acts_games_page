@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
 import useDisplay from "../../../hooks/useDisplay";
 
-function AboutUsM() {
+const AboutUsM = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
@@ -14,6 +14,7 @@ function AboutUsM() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           width: "100%",
           height: 535,
@@ -123,6 +124,6 @@ function AboutUsM() {
       </div>
     </>
   );
-}
+});
 
 export default AboutUsM;

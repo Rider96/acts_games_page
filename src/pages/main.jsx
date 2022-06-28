@@ -28,34 +28,95 @@ function Main() {
   const isSmall = isMobile || isTablet;
   const history = useHistory();
   const { t } = useTranslation();
+  const [projects, setProjects] = useState(1);
+
+  const aboutUs = React.createRef();
+  const gameIntro = React.createRef();
+  const ourHistory = React.createRef();
+  const news = React.createRef();
+  const contact = React.createRef();
+
+  const aboutUsM = React.createRef();
+  const gameIntroM = React.createRef();
+  const ourHistoryM = React.createRef();
+  const newsM = React.createRef();
+  const contactM = React.createRef();
 
   useEffect(() => {
     localStorage.setItem("langType", "ko");
   }, []);
+
+  const onAboutUslick = (clickedCount) => {
+    if (isSmall) {
+      switch (clickedCount) {
+        case 1:
+          aboutUsM.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 2:
+          gameIntroM.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 3:
+          ourHistoryM.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 4:
+          newsM.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 5:
+          contactM.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+      }
+    } else {
+      switch (clickedCount) {
+        case 1:
+          aboutUs.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 2:
+          gameIntro.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 3:
+          ourHistory.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 4:
+          news.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+
+        case 5:
+          contact.current?.scrollIntoView({ behavior: "smooth" });
+          break;
+      }
+    }
+  };
 
   return (
     <>
       <div>
         {isSmall ? (
           <div>
-            <HeaderM />
+            <HeaderM setProjects={setProjects} onAboutUslick={onAboutUslick} />
             <MainVideoM />
-            <AboutUsM />
-            <GameIntroM />
-            <OurHistoryM />
-            <NewsM />
-            <ContactM />
+            <AboutUsM ref={aboutUsM} />
+            <GameIntroM projects={projects} ref={gameIntroM} />
+            <OurHistoryM ref={ourHistoryM} />
+            <NewsM ref={newsM} />
+            <ContactM ref={contactM} />
             <FooterM />
           </div>
         ) : (
           <div>
-            <Header />
+            <Header setProjects={setProjects} onAboutUslick={onAboutUslick} />
             <MainVideo />
-            <AboutUs />
-            <GameIntro />
-            <OurHistory />
-            <News />
-            <Contact />
+            <AboutUs ref={aboutUs} />
+            <GameIntro projects={projects} ref={gameIntro} />
+            <OurHistory ref={ourHistory} />
+            <News ref={news} />
+            <Contact ref={contact} />
             <Footer />
           </div>
         )}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
@@ -19,7 +19,7 @@ const AnyReactComponent = ({ text }) => (
   </div>
 );
 
-function ContactM() {
+const ContactM = forwardRef((props, ref) => {
   const { isMobile, isTablet, isDesktop } = useDisplay();
   const isSmall = isMobile || isTablet;
   const history = useHistory();
@@ -28,6 +28,7 @@ function ContactM() {
   return (
     <>
       <div
+        ref={ref}
         style={{
           width: "100%",
         }}
@@ -308,6 +309,6 @@ function ContactM() {
       </div>
     </>
   );
-}
+});
 
 export default ContactM;

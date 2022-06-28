@@ -21,6 +21,35 @@ function MainVideoM() {
     ],
   });
 
+  useEffect(() => {
+    console.log(isTablet);
+    console.log(isMobile);
+
+    if (isTablet) {
+      setItemData({
+        images: [
+          "./assets/images/bg_t01_01.png",
+          "./assets/images/bg_t01_02.png",
+          "./assets/images/bg_t01_03.png",
+          "./assets/images/bg_t01_04.png",
+          "./assets/images/bg_t01_05.png",
+          "./assets/images/bg_t01_06.png",
+        ],
+      });
+    } else {
+      setItemData({
+        images: [
+          "./assets/images/bg_m01_01.png",
+          "./assets/images/bg_m01_02.png",
+          "./assets/images/bg_m01_03.png",
+          "./assets/images/bg_m01_04.png",
+          "./assets/images/bg_m01_05.png",
+          "./assets/images/bg_m01_06.png",
+        ],
+      });
+    }
+  }, [isMobile, isTablet]);
+
   const { t } = useTranslation();
 
   var settings = {
