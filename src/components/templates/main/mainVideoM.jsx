@@ -11,20 +11,10 @@ function MainVideoM() {
   const isSmall = isMobile || isTablet;
   const history = useHistory();
   const [itemData, setItemData] = useState({
-    images: [
-      "./assets/images/bg_m01_01.png",
-      "./assets/images/bg_m01_02.png",
-      "./assets/images/bg_m01_03.png",
-      "./assets/images/bg_m01_04.png",
-      "./assets/images/bg_m01_05.png",
-      "./assets/images/bg_m01_06.png",
-    ],
+    images: [],
   });
 
   useEffect(() => {
-    console.log(isTablet);
-    console.log(isMobile);
-
     if (isTablet) {
       setItemData({
         images: [

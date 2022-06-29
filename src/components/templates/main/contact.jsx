@@ -20,8 +20,6 @@ const AnyReactComponent = ({ text }) => (
 );
 
 const Contact = forwardRef((props, ref) => {
-  const { isMobile, isTablet, isDesktop } = useDisplay();
-  const isSmall = isMobile || isTablet;
   const history = useHistory();
   const { t } = useTranslation();
 

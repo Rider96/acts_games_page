@@ -6,8 +6,6 @@ import { useTranslation } from "react-i18next";
 import useDisplay from "../../../hooks/useDisplay";
 
 function MainVideo() {
-  const { isMobile, isTablet, isDesktop } = useDisplay();
-  const isSmall = isMobile || isTablet;
   const history = useHistory();
 
   const { t } = useTranslation();

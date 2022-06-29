@@ -219,8 +219,6 @@ const Line = styled.div.attrs((props) => {})`
 `;
 
 const OurHistory = forwardRef((props, ref) => {
-  const { isMobile, isTablet, isDesktop } = useDisplay();
-  const isSmall = isMobile || isTablet;
   const history = useHistory();
   const { t } = useTranslation();
   const [ranking, setRanking] = useState(0);

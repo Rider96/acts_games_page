@@ -108,7 +108,7 @@ function Main() {
             <ContactM ref={contactM} />
             <FooterM />
           </div>
-        ) : (
+        ) : isDesktop ? (
           <div>
             <Header setProjects={setProjects} onAboutUslick={onAboutUslick} />
             <MainVideo />
@@ -119,7 +119,7 @@ function Main() {
             <Contact ref={contact} />
             <Footer />
           </div>
-        )}
+        ) : null}
       </div>
     </>
   );

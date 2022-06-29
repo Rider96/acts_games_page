@@ -7,8 +7,6 @@ import Slider from "react-slick";
 import useDisplay from "../../../hooks/useDisplay";
 
 const News = forwardRef((props, ref) => {
-  const { isMobile, isTablet, isDesktop } = useDisplay();
-  const isSmall = isMobile || isTablet;
   const history = useHistory();
   const { t } = useTranslation();
 

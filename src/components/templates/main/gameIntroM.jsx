@@ -9,8 +9,8 @@ import useDisplay from "../../../hooks/useDisplay";
 const ImageCard = styled.img.attrs((props) => {})`
   cursor: pointer;
   margin-right: 12px;
-  width: ${(props) => (props.isTablet ? "130px" : "112.14px")};
-  height: ${(props) => (props.isTablet ? "80px" : "67px")};
+  width: ${(props) => (props.isTablet ? "120px" : "112.14px")};
+  height: ${(props) => (props.isTablet ? "70px" : "67px")};
 
   ::after {
     background: linear-gradient(transparent, black);
@@ -451,7 +451,7 @@ const GameIntroM = forwardRef((props, ref) => {
         <div
           style={{
             width: "100%",
-            height: isTablet ? 140 : 121,
+            height: isTablet ? 130 : 121,
             position: "relative",
           }}
         >
@@ -469,7 +469,7 @@ const GameIntroM = forwardRef((props, ref) => {
           style={{
             flex: 1,
             background: "#0A0518",
-            paddingTop: 12,
+            paddingTop: isTablet ? 6 : 12,
             paddingLeft: 20,
             paddingRight: 14,
             zIndex: 888,
@@ -614,7 +614,7 @@ const GameIntroM = forwardRef((props, ref) => {
               flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
-              marginTop: 34,
+              marginTop: isTablet ? 20 : 34,
             }}
           >
             <Container>
@@ -708,8 +708,8 @@ const GameIntroM = forwardRef((props, ref) => {
 
           <div
             style={{
-              marginTop: 14,
-              marginBottom: 24,
+              marginTop: isTablet ? 8 : 14,
+              marginBottom: isTablet ? 12 : 24,
             }}
           >
             <img
@@ -723,7 +723,7 @@ const GameIntroM = forwardRef((props, ref) => {
               style={{
                 cursor: "pointer",
                 width: "100%",
-                height: isTablet ? 250 : 183,
+                height: isTablet ? 310 : 183,
               }}
               src={itemData.youtube?.url}
               alt="slider"
@@ -803,7 +803,7 @@ const GameIntroM = forwardRef((props, ref) => {
                         style={{
                           cursor: "pointer",
                           width: "100%",
-                          height: isTablet ? 250 : 178,
+                          height: isTablet ? 310 : 178,
                         }}
                         src={item.url}
                         alt="slider"

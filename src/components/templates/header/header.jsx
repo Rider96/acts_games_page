@@ -82,9 +82,6 @@ function Header(props) {
 
   const history = useHistory();
 
-  const { isMobile, isTablet, isDesktop } = useDisplay();
-  const isSmall = isMobile || isTablet;
-
   const clickHandler = (lang) => {
     i18next.changeLanguage(lang);
 
